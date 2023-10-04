@@ -30,7 +30,7 @@ def init_process(args):
         
         init_para_list = []
         A1 = 0; A2 = 0
-        theta_list =[24.0,24.5,25.0,25.5,26.0,26.5,27.0]##全体を掃く＋細かいところ
+        theta_list =[25.0,30.0,35.0]##全体を掃く＋細かいところ
         for theta in tqdm(theta_list):
             a_list = []; b_list = []; S_list = []
             a_clps=vdw_R(A1,A2,theta,0.0,'a',monomer_name)
