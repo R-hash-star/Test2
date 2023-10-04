@@ -112,7 +112,7 @@ def get_one_exe(file_name,machine_type=2):
 ##################gaussview##################
 def make_gaussview_xyz(auto_dir,monomer_name,params_dict,isInterlayer=False):
     a_ = params_dict['a']; b_ = params_dict['b']; c = np.array([params_dict['cx'],params_dict['cy'],params_dict['cz']])
-    A1 = params_dict['A1']; A2 = params_dict['A2']; A3 = params_dict['theta']
+    A1 = params_dict.get('A1',0.0); A2 = params_dict.get('A2',0.0); A3 = params_dict['theta']
     phi1 = params_dict.get('phi1',0.0); phi2 = params_dict.get('phi2',0.0)
     print(phi1, phi2)
     a =np.array([a_,0,0])
@@ -159,7 +159,7 @@ def make_gaussview_xyz(auto_dir,monomer_name,params_dict,isInterlayer=False):
 
 def make_gjf_xyz(auto_dir,monomer_name,params_dict,machine_type,isInterlayer):
     a_ = params_dict['a']; b_ = params_dict['b']; c = np.array([params_dict['cx'],params_dict['cy'],params_dict['cz']])
-    A1 = params_dict['A1']; A2 = params_dict['A2']; A3 = params_dict['theta']
+    A1 = params_dict.get('A1',0.0); A2 = params_dict.get('A2',0.0); A3 = params_dict['theta']
     phi1 = params_dict.get('phi1',0.0); phi2 = params_dict.get('phi2',0.0)
     print(phi1, phi2)
     
